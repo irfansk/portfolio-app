@@ -1,0 +1,300 @@
+/* Add Tailwind to your globals.css file */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.task-list-item::before {
+    @apply hidden;
+  }
+  
+  .task-list-item {
+    @apply list-none;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  html::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+  }
+  
+  .underline-magical {
+    @apply bg-gradient-to-r from-primary-500 to-primary-500 bg-no-repeat 
+    no-underline [background-position:0_100%]
+    [background-size:100%_0.2em] focus:[background-size:100%_100%] hover:text-white
+    hover:[background-size:100%_100%] motion-safe:transition-all
+    motion-safe:duration-300 dark:from-primary-500 dark:to-primary-500;
+  }
+  
+  .horizontal-underline {
+    border-bottom-width: 0;
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#0466c8, #0466c8);
+    background-size: 0 3px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s ease-in-out;
+  }
+  
+  .horizontal-underline:hover {
+    background-size: 100% 3px;
+    background-position: 0 100%;
+  }
+  
+  .horizontal-underline-active {
+    background-size: 100% 3px;
+    background-position: 0 100%;
+  }
+  
+  #nprogress .bar {
+    background: #de1d8d !important;
+    height: 4px !important;
+  }
+  
+  .introText {
+    transition: opacity 0.4s;
+  }
+  
+  [cmdk-root] {
+    @apply fixed top-[25vh] left-1/2 z-10 w-full max-w-[640px] 
+    -translate-x-1/2 transform rounded-xl border bg-white p-2 shadow-lg 
+    dark:border-neutral-800 dark:bg-neutral-900 dark:shadow 
+    dark:shadow-neutral-700;
+  }
+  
+  [cmdk-input] {
+    @apply h-12 w-full border-0 border-b border-b-gray-200 
+    bg-transparent text-sm font-semibold
+    text-gray-500 placeholder-gray-500 outline-none focus:border-b focus:border-transparent 
+    focus:border-b-gray-200 focus:ring-0 dark:border-b-gray-500 dark:text-gray-200
+    dark:placeholder-gray-300;
+  }
+  
+  [cmdk-list] {
+    /* @apply mt-2 max-h-64 overflow-y-scroll px-4 scrollbar-thin
+    scrollbar-track-gray-100 scrollbar-thumb-gray-300 scrollbar-track-rounded-lg 
+    scrollbar-thumb-rounded-lg dark:scrollbar-track-neutral-800 
+    dark:scrollbar-thumb-neutral-700; */
+  }
+  
+  [cmdk-item] {
+    @apply relative flex h-12 cursor-pointer select-none items-center space-x-3 rounded-md
+    px-4 text-sm font-medium text-gray-700 transition-all duration-200 
+    ease-in dark:text-gray-200;
+  }
+  
+  [cmdk-item][aria-selected='true'] {
+    @apply bg-gray-200 dark:bg-neutral-800;
+  }
+  
+  [cmdk-group-heading] {
+    @apply flex select-none items-center py-1 text-sm 
+    font-medium text-gray-700 dark:text-gray-200;
+  }
+  
+  [cmdk-empty] {
+    @apply flex items-center justify-center py-4 text-sm text-gray-500;
+  }
+
+
+
+
+.no-scroll-bar {
+    scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.bg-blur-one {
+    background: #43D9AD;
+    opacity: 0.4;
+    filter: blur(174px);
+}
+
+.bg-blur-two {
+    background: #5565E8;
+    opacity: 0.9;
+    filter: blur(50px);
+}
+
+p, span, h1, h2, h3, h4, h5, h6 {
+    cursor: default;
+}
+
+.project:hover {
+    box-shadow: #4D5BCE 0px 2px 5px -2px, #5565E8 0px 3px 7px -3px;
+}
+
+input, textarea {
+    border: none;
+}
+
+input:focus, textarea:focus {
+    border: none;
+}
+
+input, textarea {
+    outline: 1px solid #1E2D3D;
+    transition: all ease-in 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: 1px solid #607B96;
+}
+
+.error {
+    outline: 1px solid #f40101;
+}
+
+textarea {
+    resize: none;
+}
+
+.asterisk::before {
+    content: "* ";
+    color: #607B96;
+}
+
+.input-bx-active:active, .input-bx-active:focus {
+    box-shadow: rgba(254, 165, 95, 1) 0px 2px 30px -15px;
+}
+
+.btn-submit-hover:hover {
+    transition: all ease-in 0.3s;
+    box-shadow: rgba(254, 165, 95, 0.5) 0px 0px 5px
+}
+
+ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 10;
+}
+
+li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: #011627;
+    animation: animateCircles 25s linear infinite;
+    bottom: -150px;
+}
+
+li:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+li:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+li:nth-child(3) {
+    left: 1%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+li:nth-child(4) {
+    left: 99%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+li:nth-child(5) {
+    left: 5%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+li:nth-child(6) {
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+li:nth-child(7) {
+    left: 5%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+li:nth-child(8) {
+    left: 5%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+li:nth-child(9) {
+    left: 90%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+@keyframes animateCircles {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+.pic-shadow {
+    box-shadow: #45d9ac1a 0px 4px 16px;
+}
+
+.heading-gradient {
+    background: linear-gradient(84deg, #43d9ad 5%, #fea55f 89%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.heading-gradient-underline {
+    background: linear-gradient(84deg, #43d9ad 5%, #fea55f 89%);
+}
