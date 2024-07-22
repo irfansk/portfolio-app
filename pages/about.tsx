@@ -28,7 +28,7 @@ const about = () => {
                 <div className={styles.about_content}>
                   <div className={styles.about_description}>
                     <p>
-                      Hello! I&apos;m Irfan Sk, a software Developer, INDIA.
+                      Hello! I am Irfan Sk, a software Developer, INDIA.
                     </p>
                     <p>
                       I have always been passionate about Computers, So I completed my engineering in Computer Science.
@@ -36,7 +36,7 @@ const about = () => {
                       
                     </p>
                     <p>
-                    After completing my B.Tech in Computer Science (2018), I spent the first four year running my own startup animation company. Although the venture didn't go as planned, it provided me with invaluable experience in technical and creative fields.
+                    After completing my B.Tech in Computer Science (2018), I spent the first four year running my own startup animation company. Although the venture did not go as planned, it provided me with invaluable experience in technical and creative fields.
                     </p>
                     
                     <div className='md:container md:mx-auto text-center mb-2'>
